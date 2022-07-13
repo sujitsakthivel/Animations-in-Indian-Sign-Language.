@@ -1,0 +1,65 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CGV PROJ BY 428 & 456</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a class="logo" href="/"><img src="images/logo.jpg" alt="logo" width="100" height="100" ></a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="temp.html">Home</a></li>
+                <li><a href="temp.html">Services</a></li>
+                <li><a href="temp.html">About us</a></li>
+                <li><a href="temp.html">Contact us</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="index.html">Search</a>
+        <p class="menu cta">Menu</p>
+    </header>
+    <div class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay__content">
+            <a href="#">Services</a>
+            <a href="#">Projects</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="mobile.js"></script>
+        <div class="container">
+        <h1 style="font-family: 'Times New Roman', Times, serif;"> INDIAN SIGN LANGUAGE </h1>
+        <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> PONGAL </h2>
+
+        <div class="video-container">
+            <div class="video"><video src="origvids/pongal.mp4" muted ></video></div>
+            <div class="video"><video src="vids/pongal.mkv" muted ></video></div>
+            
+        </div>
+
+        <div class="popup-video">
+            <span>&times;</span>
+            <video src="vids/ambulance.mkv" muted autoplay controls></video>
+
+
+        </div>
+        </div>
+
+        <script>
+            document.querySelectorAll('.video-container video').forEach(vid => {
+                vid.onclick =() =>{
+                    document.querySelector('.popup-video').style.display='block';
+                    document.querySelector('.popup-video video').src = vid.getAttribute('src');
+                }
+
+            });
+            document.querySelector('.popup-video span').onclick =() =>{
+                document.querySelector('.popup-video').style.display='none';     
+            } 
+        </script>
+    </body>
+</html>
